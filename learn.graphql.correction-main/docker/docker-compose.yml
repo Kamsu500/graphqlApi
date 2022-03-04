@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  database:
+    image: postgres:latest
+    container_name: database
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASS=root
+      - POSTGRES_DB=api
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
